@@ -38,21 +38,7 @@ public class TripRequest {
 		end = Integer.parseInt(reqPieces[1]);
 		
 		// true iff optimize by distance
-		//isDistance = reqPieces[2].equals("D");
-		
-		//checking if there are a requisite number of pieces
-		if (start != 0 || end != vertices.size()-1) {
-			throw new IllegalArgumentException("Illegal request.");
-		}
-		if (start == end) {
-			throw new IllegalArgumentException("Illegal request.");
-		}
-		
-		//checking that the tag is D or T 
-		if (reqPieces[2].equals("D") || reqPieces[2].equals("T")) {
-			// true iff optimize by distance
-			isDistance = reqPieces[2].equals("D");
-		}
+		isDistance = reqPieces[2].equals("D");
 	}
 	
 	/**
