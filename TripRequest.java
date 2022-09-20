@@ -17,7 +17,7 @@ public class TripRequest {
 	private boolean isDistance;
 	
 	/**
-	 * Create trip request
+	 * Create trip request from location to location
 	 * @param req 
 	 *    String representing a textual request formatted with
 	 *    the number of the start and end nodes, and a "D" if
@@ -26,8 +26,8 @@ public class TripRequest {
 	 * 	A list of vertices of the graph so can look up label of nodes.
 	 */
 	public TripRequest(String req, List<String> vertices) {
-		// TO DO: Check input to make sure it has requisite number of
-		// pieces, that the indices are legal, and tag letter is "D" or "T"
+		// Check input to make sure it has requisite number of
+		// pieces, that the indices are legal, and tag letter is "D" or "T" (which one I will prioritize by)
 		
 		String[] reqPieces = req.split(" ");
 		
